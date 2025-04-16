@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>StreamCore - Cloud Gaming</title>
+  <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/8/83/Steam_icon_logo.svg" type="image/svg+xml">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, #0a0f2c, #1a2f4f);
+      color: white;
+    }
+    header {
+      background-color: #000000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+    header h1 {
+      color: #00d8ff;
+    }
+    nav a {
+      color: white;
+      margin: 0 1rem;
+      text-decoration: none;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .hero {
+      background: url('https://via.placeholder.com/1600x500') no-repeat center center;
+      background-size: cover;
+      text-align: center;
+      padding: 5rem 2rem;
+    }
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .hero button {
+      padding: 1rem 2rem;
+      font-size: 1rem;
+      background-color: #00d8ff;
+      border: none;
+      color: black;
+      cursor: pointer;
+    }
+    .section {
+      padding: 3rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .games-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+    }
+    .game-card {
+      background-color: #14213d;
+      padding: 1rem;
+      border-radius: 10px;
+      text-align: center;
+    }
+    .game-card img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .game-card p {
+      margin-top: 0.5rem;
+    }
+    .login-form, .register-form, .support-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    .login-form input, .register-form input, .support-form input, .support-form textarea {
+      padding: 0.75rem;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+    .login-form button, .register-form button, .support-form button {
+      padding: 0.75rem;
+      background-color: #00d8ff;
+      color: black;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    .plans {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .plan-card {
+      background-color: #0d1b2a;
+      padding: 2rem;
+      border-radius: 12px;
+      text-align: center;
+      width: 250px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+    .plan-card h3 {
+      color: #00d8ff;
+      margin-bottom: 0.5rem;
+    }
+    .plan-card p {
+      font-size: 1.2rem;
+    }
+    .plan-card button {
+      margin-top: 1rem;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      background-color: #00d8ff;
+      border: none;
+      color: black;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    footer {
+      background-color: #000000;
+      text-align: center;
+      padding: 2rem;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>StreamCore</h1>
+    <nav>
+      <a href="#">Início</a>
+      <a href="#biblioteca">Biblioteca</a>
+      <a href="#planos">Planos</a>
+      <a href="#suporte">Suporte</a>
+      <a href="#login">Entrar</a>
+      <a href="#registrar">Registrar</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Jogue em qualquer lugar. Sem limites.</h2>
+    <button>Comece Agora</button>
+  </section>
+
+  <section class="section" id="biblioteca">
+    <h2>Biblioteca de Jogos</h2>
+    <div class="games-grid">
+      <div class="game-card">
+        <img src="https://upload.wikimedia.org/wikipedia/en/e/e5/Xbox_logo_2012.svg" alt="Xbox">
+        <p>Xbox</p>
+      </div>
+      <div class="game-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Playstation_logo_colour.svg" alt="PlayStation">
+        <p>PlayStation</p>
+      </div>
+      <div class="game-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/0d/Nintendo_switch_logo.svg" alt="Nintendo Switch">
+        <p>Nintendo Switch</p>
+      </div>
+      <div class="game-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Steam_icon_logo.svg" alt="Steam">
+        <p>Steam</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="planos">
+    <h2>Planos de Assinatura</h2>
+    <div class="plans">
+      <div class="plan-card">
+        <h3>Plano de 30 Dias</h3>
+        <p><strong>Grátis</strong> - Acesso completo por 30 dias!</p>
+        <button>Ativar Grátis</button>
+      </div>
+      <div class="plan-card">
+        <h3>Plano Mensal</h3>
+        <p>R$10,45/mês - Renovação automática.</p>
+        <button>Assinar</button>
+      </div>
+      <div class="plan-card">
+        <h3>Plano Anual</h3>
+        <p>12 meses por <strong>R$168,95</strong><br>O valor mensal diminui com o tempo!</p>
+        <button>Assinar Anual</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="login">
+    <h2>Entrar na Sua Conta</h2>
+    <form class="login-form">
+      <input type="text" placeholder="Usuário" required>
+      <input type="password" placeholder="Senha" required>
+      <button type="submit">Entrar</button>
+    </form>
+  </section>
+
+  <section class="section" id="registrar">
+    <h2>Criar Nova Conta</h2>
+    <form class="register-form">
+      <input type="text" placeholder="Nome de Usuário" required>
+      <input type="email" placeholder="E-mail" required>
+      <input type="password" placeholder="Senha" required>
+      <input type="password" placeholder="Confirmar Senha" required>
+      <button type="submit">Registrar</button>
+    </form>
+  </section>
+
+  <section class="section" id="suporte">
+    <h2>Suporte ao Cliente</h2>
+    <form class="support-form" action="mailto:suporte@streamcore.com" method="post" enctype="text/plain">
+      <input type="text" name="nome" placeholder="Seu nome" required>
+      <input type="email" name="email" placeholder="Seu e-mail" required>
+      <textarea name="mensagem" rows="4" placeholder="Como podemos te ajudar?" required></textarea>
+      <button type="submit">Enviar Mensagem</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 StreamCore Cloud Gaming. Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>
